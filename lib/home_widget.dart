@@ -1,45 +1,43 @@
 import 'package:flutter/material.dart';
-import 'package:my_app/feed_widget.dart';
-import 'package:my_app/messages_widget.dart';
-import 'package:my_app/profile_widget.dart';
+import 'placeholder_widget.dart';
 
 class Home extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return new _HomeState();
+    return _HomeState();
   }
 }
 
 class _HomeState extends State<Home> {
   int _currentIndex = 0;
   final List<Widget> _children = [
-    new FeedWidget(),
-    new MessagesWidget(),
-    new ProfileWidget()
+    PlaceholderWidget(Colors.white),
+    PlaceholderWidget(Colors.deepOrange),
+    PlaceholderWidget(Colors.green)
   ];
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(
-        title: new Text('My Flutter App'),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('My Flutter App'),
       ),
       body: _children[_currentIndex],
-      bottomNavigationBar: new BottomNavigationBar(
+      bottomNavigationBar: BottomNavigationBar(
         onTap: onTabTapped,
         currentIndex: _currentIndex,
         items: [
-          new BottomNavigationBarItem(
-            icon: new Icon(Icons.home),
-            title: new Text('Home'),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            title: Text('Home'),
           ),
-          new BottomNavigationBarItem(
-            icon: new Icon(Icons.mail),
-            title: new Text('Messages'),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.mail),
+            title: Text('Messages'),
           ),
-          new BottomNavigationBarItem(
-            icon: new Icon(Icons.person),
-            title: new Text('Profile')
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            title: Text('Profile')
           )
         ],
       ),
