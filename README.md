@@ -1,6 +1,7 @@
 # my_app
 
-A new Flutter project.
+Sample Flutter app using a Bottom Navigation Bar.
+Tutorial for this code can be found here: [WillowTree Ideas](https://willowtreeapps.com/ideas/how-to-use-flutter-to-build-an-app-with-bottom-navigation)
 
 ## Getting Started
 
